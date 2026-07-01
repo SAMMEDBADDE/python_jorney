@@ -1,0 +1,15 @@
+# Python is the interpreted high level machine or a programming language.
+# The Python programming language was created by Dutch programmer Guido van Rossum
+and was first officially released in 1991.
+# Python programming is widely used in multiple things related to Automation, Data Science,  Web-dev, AI, etc...
+
+-- Readability: Code should look almost like English.
+-- Explicitness: Explicit is better than implicit.
+-- Simplicity: Simple is better than complex.
+-- One Way: There should ideally be only one obvious way to do something.
+
+# Features - 
+
+-- Dynamically Typed: You do not need to declare variable types (like int or string) before using them.
+-- Multi-Paradigm: Supports Object-Oriented, Functional, and Procedural programming.
+-- Batteries Included: Comes with a massive standard library for tasks like file handling, math, and networking.
