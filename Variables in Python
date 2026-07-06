@@ -1,3 +1,1 @@
-variable in Python is a named storage location that holds data. Think of it as a labeled box where you can store values, and the label lets you find and use that data later.
-
-Rules for Naming VariablesMust start with a letter or an underscore (_).Cannot start with a number.Can only contain alphanumeric characters and underscores (A-z, 0-9, and _).Case-sensitive (Age, age, and AGE are three different variables).Cannot use Python keywords (like if, while, class, or import).
+In Python, a variable is a named container used to store data values in a computer's memory. Unlike languages like Java or C++, Python has no command for declaring a variable or specifying its data type; a variable is created automatically the moment you first assign a value to it using the = operator
