@@ -1,1 +1,85 @@
+# ==========================================
+# PYTHON JOURNEY: 03 - DATA TYPES
+# ==========================================
+# This file covers: Numeric, Text, Boolean, None, and basic Type Checking.
 
+# 1. NUMERIC TYPES
+# ----------------
+# Integers (int): Whole numbers without decimals.
+age = 25
+count = -10
+print(f"Integer: {age}, Type: {type(age)}")
+
+# Floats (float): Numbers with decimal points.
+price = 19.99
+temperature = -3.5
+print(f"Float: {price}, Type: {type(price)}")
+
+# Complex (complex): Numbers with real and imaginary parts (used in advanced math).
+complex_num = 3 + 4j
+print(f"Complex: {complex_num}, Type: {type(complex_num)}")
+
+# 2. TEXT TYPE
+# ------------
+# String (str): Sequence of characters enclosed in quotes.
+# You can use single ('') or double ("") quotes.
+name = 'Alice'
+message = "Hello, Python!"
+print(f"String: {name}, Type: {type(name)}")
+
+# 3. BOOLEAN TYPE
+# ---------------
+# Boolean (bool): Represents truth values: True or False.
+# Often used in conditions and comparisons.
+is_student = True
+has_license = False
+print(f"Boolean: {is_student}, Type: {type(is_student)}")
+
+# 4. NONE TYPE
+# ------------
+# NoneType (None): Represents the absence of a value or a null value.
+# Often used as a default value for variables.
+result = None
+print(f"None: {result}, Type: {type(result)}")
+
+# 5. CHECKING TYPES
+# -----------------
+# Use the type() function to check the data type of any variable.
+variable = 100
+print(f"The type of {variable} is {type(variable)}")
+
+variable = "Now I am a string"
+print(f"The type of '{variable}' is {type(variable)}")
+# Note: Python is dynamically typed, so the same variable can change types.
+
+# 6. TYPE CONVERSION (CASTING)
+# ----------------------------
+# Converting one data type to another explicitly.
+
+# String to Integer
+text_num = "100"
+num = int(text_num)
+print(f"String '100' converted to int: {num + 50}") # Output: 150
+
+# Integer to String
+age_num = 30
+age_str = str(age_num)
+print(f"Integer 30 converted to string: 'Age is " + age_str + "'")
+
+# Float to Integer (decimals are truncated/removed)
+float_val = 9.99
+int_val = int(float_val)
+print(f"Float 9.99 converted to int: {int_val}") # Output: 9
+
+# Integer to Float
+int_val = 5
+float_val = float(int_val)
+print(f"Integer 5 converted to float: {float_val}") # Output: 5.0
+
+# 7. PRACTICE EXERCISE
+# --------------------
+# Try changing the values below and run the code to see what happens!
+user_input = "50"
+# Convert user_input to an integer and multiply by 2
+calculated_value = int(user_input) * 2
+print(f"Calculated Value: {calculated_value}")   
