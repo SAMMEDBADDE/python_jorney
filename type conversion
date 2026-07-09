@@ -1,0 +1,120 @@
+# PYTHON JOURNEY: 04 - TYPE CONVERSION
+
+# This file covers: Implicit vs Explicit conversion, 
+# and converting between int, float, str, bool, list, tuple, and set.
+
+# 1. IMPLICIT TYPE CONVERSION
+
+# Python automatically converts one data type to another when needed.
+# Usually happens when mixing int and float.
+
+num_int = 100
+num_float = 2.5
+
+# Python converts num_int to float automatically to prevent data loss
+result = num_int + num_float 
+
+print(f"--- Implicit Conversion ---")
+print(f"int ({num_int}) + float ({num_float}) = {result}")
+print(f"Type of result: {type(result)}") # Output: <class 'float'>
+
+# 2. EXPLICIT TYPE CONVERSION (CASTING)
+
+# Manually forcing a value to change its type using built-in functions.
+
+# --- Converting to Integer (int) ---
+# Floats are truncated (decimal part removed), not rounded.
+float_val = 9.99
+int_from_float = int(float_val)
+print(f"\n--- To Integer ---")
+print(f"int(9.99) -> {int_from_float}") 
+
+# Strings must represent a valid number.
+str_num = "50"
+int_from_str = int(str_num)
+print(f"int('50') -> {int_from_str}")
+
+# Booleans: True becomes 1, False becomes 0.
+bool_val = True
+int_from_bool = int(bool_val)
+print(f"int(True) -> {int_from_bool}")
+
+# --- Converting to Float (float) ---
+int_val = 25
+float_from_int = float(int_val)
+print(f"\n--- To Float ---")
+print(f"float(25) -> {float_from_int}")
+
+str_pi = "3.14"
+float_from_str = float(str_pi)
+print(f"float('3.14') -> {float_from_str}")
+
+# --- Converting to String (str) ---
+# Almost any data type can be converted to a string.
+num = 123
+bool_val = False
+lst = [1, 2, 3]
+
+print(f"\n--- To String ---")
+print(f"str(123) -> '{str(num)}' (Type: {type(str(num))})")
+print(f"str(False) -> '{str(bool_val)}'")
+print(f"str([1, 2, 3]) -> '{str(lst)}'")
+
+# --- Converting to Boolean (bool) ---
+# "Falsy" values: 0, 0.0, "", [], (), {}, None -> become False
+# Everything else -> becomes True
+print(f"\n--- To Boolean ---")
+print(f"bool(1) -> {bool(1)}")       # True
+print(f"bool(0) -> {bool(0)}")       # False
+print(f"bool('Hello') -> {bool('Hello')}") # True
+print(f"bool('') -> {bool('')}")     # False (Empty string)
+print(f"bool([]) -> {bool([])}")     # False (Empty list)
+
+# 3. SEQUENCE CONVERSION
+# ----------------------
+# Converting between Lists, Tuples, and Sets.
+
+my_list = [1, 2, 2, 3]
+my_tuple = (4, 5, 6)
+my_set = {7, 8, 8, 9} # Sets remove duplicates automatically
+
+print(f"\n--- Sequence Conversion ---")
+# List to Tuple
+list_to_tuple = tuple(my_list)
+print(f"List {my_list} -> Tuple {list_to_tuple}")
+
+# Tuple to List
+tuple_to_list = list(my_tuple)
+print(f"Tuple {my_tuple} -> List {tuple_to_list}")
+
+# List to Set (Duplicates removed!)
+list_to_set = set(my_list)
+print(f"List {my_list} -> Set {list_to_set}")
+
+# String to List (Splits into characters)
+text = "Hi"
+str_to_list = list(text)
+print(f"String 'Hi' -> List {str_to_list}")
+
+# 4. PRACTICAL EXAMPLE: USER INPUT
+# --------------------------------
+# input() always returns a string. You MUST convert it to do math.
+
+user_age_str = input("\nEnter your age: ") 
+# If user enters "25", user_age_str is "25" (string)
+
+# Convert to integer for calculation
+user_age_int = int(user_age_str)
+
+future_age = user_age_int + 10
+print(f"In 10 years, you will be {future_age} years old.")
+
+# 5. COMMON ERRORS
+# ----------------
+# Uncommenting the lines below will cause errors.
+
+# ValueError: Cannot convert non-numeric string to int
+# bad_convert = int("Hello") 
+
+# TypeError: Cannot convert complex or large lists directly to float sometimes
+# bad_convert_2 = float([1, 2]) Copied!   
